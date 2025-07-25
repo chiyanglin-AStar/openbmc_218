@@ -1,3 +1,5 @@
+[***OpenBMC 2.18 Tutorial***](2025-openbmc218-tutorial.md)
+
 # OpenBMC
 
 [![Build Status](https://jenkins.openbmc.org/buildStatus/icon?job=latest-master)](https://jenkins.openbmc.org/job/latest-master/)
