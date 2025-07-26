@@ -1,6 +1,6 @@
+## Create BSP and Machine Layer
 
 ```shell
-
 bitbake-layers create-layer ../meta-yourcompany
 
 bitbake-layers create-layer ../meta-yourcompany/meta-yourmachine
