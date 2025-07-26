@@ -40,3 +40,5 @@ sudo ln -s /usr/bin/python3.1x /usr/bin/python3
 
 bitbake u-boot-aspeed-sdk
 ```
+
+[next doc](https://github.com/chiyanglin-AStar/openbmc_218/meta-yourcompany/meta-yourmachine/README)
