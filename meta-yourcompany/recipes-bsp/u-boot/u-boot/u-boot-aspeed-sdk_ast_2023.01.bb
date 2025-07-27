@@ -1,0 +1,38 @@
+inherit debug_info2
+require recipes-bsp/u-boot/u-boot-common.inc
+require recipes-bsp/u-boot/u-boot.inc
+require u-boot-common-ast_bsp_2023.01.inc
+#require conf/machine/include/fitimage-sign.inc
+
+S = "${WORKDIR}/git"
+
+PROVIDES += "u-boot"
+
+do_msg:append () {
+    bbwarn "this is debug message from uboot.bb shell"
+}
+
+python do_msg:append() {
+    import time
+    bb.warn( "this is debug message from uboot.bb python %s" % ( time.strftime('%Y%m%d', time.gmtime())))
+}
+
+#addtask do_msg before do_fetch
+
+python do_unpack:append() {
+#print("Hello, this is a debug message from u-boot.bb - do_unpack")	
+bb.warn("Hello, this is a debug message from u-boot.bb - do_unpack")
+}
+
+do_install:append(){
+        bbwarn "Hello, this is a debug message from u-boot.bb - do_install"
+}
+
+do_configure:append(){
+        bbwarn "Hello, this is a debug message from u-boot.bb - do_configure"
+}
+
+do_compile:append(){
+	bbwarn "Hello, this is a debug message from u-boot.bb - do_compile"
+}
+addtask do_debug_info2 before do_compile
