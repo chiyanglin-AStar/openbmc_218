@@ -1,3 +1,4 @@
+## this is not complete code ,just show parsing flow 
 inherit debug_info2
 require recipes-bsp/u-boot/u-boot-common.inc
 require recipes-bsp/u-boot/u-boot.inc
