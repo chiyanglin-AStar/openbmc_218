@@ -1,0 +1,21 @@
+SUMMARY = "MyProject - A simple C++ project using CMake"
+DESCRIPTION = "This is a simple multi-source C++ project using CMake build system"
+LICENSE = "MIT"
+LIC_FILES_CHKSUM = "file://main.cpp;beginline=1;endline=10;md5=<your-md5-here>"
+
+SRC_URI = "file://CMakeLists.txt \
+           file://main.cpp \
+           file://utils/helper.cpp \
+           file://utils/helper.h \
+           file://math/calculator.cpp \
+           file://math/calculator.h"
+
+S = "${WORKDIR}"
+
+inherit cmake
+
+# 如果需要安裝執行檔
+do_install() {
+    install -d ${D}${bindir}
+    install -m 0755 ${B}/MyProject ${D}${bindir}/myproject
+}
