@@ -9,3 +9,5 @@
 4. myproject.bb (cmake)
 
 5. multi-source-example.bb (meson)
+
+6. rust example (git)
